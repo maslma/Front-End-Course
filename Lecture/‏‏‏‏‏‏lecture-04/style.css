@@ -1,0 +1,118 @@
+/* HTML بملف CSS لازم نربط ملف  */
+ul {
+    list-style: circle;
+}
+
+/* ul جوا  li هاد ال  */
+/* Nested هي عبارة عن  */
+ul li {
+    list-style: disc;
+}
+
+/* ol جوا  li هاد ال  */
+ol li {
+    list-style: disc;
+}
+
+/* ul/ol هاد في حال لما ما يكون جو ال  */
+li {
+    list-style: circle;
+}
+
+/* الاولويات الي هما 
+1-id
+2-attribute
+3-class
+4-tag name
+5-*
+*/
+h1 {
+    color: palegoldenrod;
+    background-color: peru;
+    font-size: 40px;
+    font-weight: 500;
+    text-align: center;
+    
+}
+h3 {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+/*(.) ويعرف كلاس لازم اعطيه  Tag  هاد مش  CSS عشان احكي ل  */
+/*class selector هاد ال  */
+.purple {
+    color: purple;
+    background-color: pink;
+}
+
+.orange {
+    color: orangered;
+    background-color: papayawhip;
+}
+
+.green {
+    color: green;
+    background-color: palegoldenrod;
+}
+
+.button {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* (id)->(#)باخذ ال */
+/* #read-more-button#read-more-button -> Selector بمعنى هيك قوية ال  */
+#read-more-button {
+    color: green;
+    background-color: palegreen;
+}
+
+/* attribute selector -> */
+button[type=button] {
+    color: blue;
+    background-color: paleturquoise;
+}
+
+button[type=submit] {
+    color: purple;
+    background-color: pink;
+}
+
+/* حتى لو غيرنا الترتيب a{} اقوى من ال  a[href]  */
+a {
+    text-decoration: none;
+    color: black;
+    cursor: default;
+}
+
+a[href] {
+    text-decoration: underline;
+    color: brown;
+    /* href هاد في حالة كان  */
+    cursor: pointer;
+}
+
+/* Note -> بنطلغ على الاولوية Selector الفرق الترتيب/اما الاتنين مش نفس  Selector طالما الاتنين نفس ال  */
+
+.box {
+    width: 150px;
+    height: 150px;
+    color: orangered;
+    background-color: peachpuff;
+    /* padding -> 20px (top/bottom/right/left) 
+       padding ->20px 10px (20px for top/bottom 10px for left/right)
+       5px top 10px right 20px bottom 15px left
+       border -> border width / border style / border color 
+    */
+    padding: 5px 10px 20 15;
+    border: 2px solid orangered;
+    border-radius: 10px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 15px;
+    
+}

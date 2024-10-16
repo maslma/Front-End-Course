@@ -1,0 +1,116 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ :root {
+    --background-color: #0a0a0a;
+    --foreground-color: #fafafa;
+    --card-color: #171717;
+    --link-color :#262626 ;
+    --paragraph-color:#a3a3a3;
+    --primary-color: #84cc16;
+ }
+
+ body {
+   display: flex;
+    font-family: sans-serif;
+    color: var(--foreground-color);
+    background-color: var(--background-color);
+ }
+
+ html , body {
+   height: 100%;
+ }
+
+ main {
+    width: 100%;
+    max-width: 400px;
+    background-color: var(--card-color);
+    padding: 40px;
+    border-radius: 8px;
+    
+    margin: auto;
+    
+    /* OLD-SCHOOL WAY OF CENTERING IN HTML/CSS */
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%); */
+ }
+
+ .profile-info {
+    position: relative;
+ }
+
+ .profile-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 24px;
+
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    /* IN CASE YOUR IMAGE IS NOT A SQUARE USE THIS */
+    object-fit: cover;
+ }
+
+ .profile-info  h1{
+   font-size: 24px;
+   margin-bottom: 12px;
+ }
+
+
+ .profile-info  h2{
+   font-size: 16px;
+   color: var(--primary-color);
+   margin-bottom: 20px;
+ }
+ 
+ .profile-info h1 , .profile-info h2 {
+   font-weight: 500;
+   text-align: center;
+ }
+
+ .profile-info  p {
+   font-size: 14px;
+   text-align: center;
+   font-style: italic;
+   color: var(--paragraph-color);
+   margin-bottom: 24px;
+ }
+
+ .profile-links {
+   list-style: none;
+ }
+ 
+ /* sodo class بدنا نضيف  */
+ /* .profile-links li:not(:last-child) -> تاني اشي بديش هاد الاشي ما عدا اخر قائمة  Selactor بدنا نجلل هاد الجزئية عملنا   */
+ .profile-links li:not(:last-child) {
+   margin-bottom: 16px;
+}
+
+ .profile-links li a {
+   display: inline-block;
+   width: 100%;
+
+   font-size: 14px;
+   text-align: center;
+   text-decoration: none;
+
+   color: var(--foreground-color);
+   background-color: var(--link-color);
+
+   padding: 16px;
+   border-radius: 8px;
+
+   transition: 100ms all ease-in-out;
+}
+
+.profile-links li a:hover{
+   background-color: var(--foreground-color);
+   color: var(--background-color);
+}

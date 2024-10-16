@@ -1,0 +1,109 @@
+* {
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+html {
+    /* = 10 PX */
+    font-size: 62.5%;
+}
+
+img {
+    width: 100%;
+}
+
+.container {
+    min-height: 75%;
+    background-color: palegoldenrod;
+    padding: 2rem;
+}
+
+.box {
+    height: 40rem;
+    font-size: 4.8rem;
+    color: white;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Desktop Design */
+.box-1 {
+    background-color: red;
+}
+
+/* 
+first desktop
+box-1 : 
+ -red in desktop 
+- green in tablet 
+- blue in mobile 
+*/
+
+/* 668px - 1024px -etc ->
+Called break-points ->هي عبارة عن النقاط في حجم الشاشة الي راح يسير فيه عنا تغيير 
+You can use as much break-points as you need
+You can use as many @media as you need
+/*
+
+
+/* media queries الالولوية الى  */
+/* (max-width: 1024px) -> عبارة عن 1024 وتحت */
+@media only screen and (max-width: 1024px) {
+
+    /* Tablet Design*/
+    .box-1 {
+        background-color: green;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    /* Mobile Design*/
+    .box-1 {
+        background-color: blue;
+    }
+}
+
+/* Print Media Query: Just an example*/
+@media print {
+    .box-1 {
+        display: none;
+    }
+}
+
+/* Desktop (1024px) and up */
+/* Tablet (768px) and up - (768px -> 1024px) */
+/* Mobile (320px) and up - (320px -> 768px) */
+
+/* 
+first moblie
+box-2 : 
+ -purple in mobile 
+- orange in tablet 
+- black in desktop 
+*/
+
+/* Mobile Design (0 - 768px) */
+.box-2 {
+    background-color: purple;
+}
+/* (min-width : 768px) -> عبارة عن 768 وفوق */
+@media only screen and (min-width : 768px) {
+    /* Table Design */
+    .box-2 {
+        background-color: orange;
+    }
+}
+
+@media only screen and (min-width: 1024px){
+    .box-2 {
+        background-color: black;
+    }
+}

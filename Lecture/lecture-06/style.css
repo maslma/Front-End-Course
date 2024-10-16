@@ -1,0 +1,198 @@
+* {
+    /* Note -> margin: 0 عبارة عن  m0/padding : 0 عبارة عن  p0 اختصار  */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* 1 REM = 10 px     */
+    font-size: 10px;
+}
+
+/* View port Width/Height */
+
+.man-united {
+    width: 500px;
+    /* absolute vale قيمة ثابتة  */
+
+    background-color: black;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.liverpool {
+    width: 50%;
+    background-color: red;
+    margin-bottom: 10px;
+}
+
+.arsenal {
+    width: 50vw;
+    background-color: orangered;
+    margin-bottom: 10px;
+}
+
+.man-city {
+    width: 50vw;
+    background-color: darkblue;
+    margin-bottom: 20px;
+}
+
+/* 
+-Width Sizing Unit
+-Relative to the parent
+*/
+.parent {
+    width: 1000px;
+}
+
+.box {
+    /* height: 100px; */
+    background-color: #00ff00;
+    padding: 20px;
+    border: 5px solid #000000;
+}
+
+.box-1 {
+    width: 75%;
+    margin-bottom: 10px;
+}
+
+.box-2 {
+    width: 50%;
+    height: 75vh;
+    max-height: 300px;
+    min-height: 1px;
+    margin-bottom: 10px;
+}
+
+/*
+1-px -> Css وحدة القياس الاساسية في 
+2-( % - rem - vh - vw - em ) ->px بتعملهم تحويل لل  Css  بالنهاية ال 
+*/
+.box-1 p {
+    font-size: 16px;
+}
+
+/* 
+(% - rem - vh - vw - em) 
+ 1-لشغلة تانية  relative
+ 2-وحدات قياس نسبية  px كلهم ما عدا 
+*/
+/*
+ REM Sizing Unit
+ 1 REM = 16 PX (DEFULT)
+ Relative To The Root's ->(Html Element) Font Size
+
+ */
+.box-2 p {
+    font-size: 1rem;
+}
+
+/* 
+-Em Size Unit -> Root بتاخذ  FontSize الو  Parent  بتاخذ اول 
+1 EM = 16 PX (By Default)
+Relative To The Parent's Font Size
+*/
+
+.box-3 {
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.box-3 p {
+    font-size: 1em;
+}
+
+
+.link[href] {
+    color: white;
+    background-color: brown;
+    text-decoration: none;
+}
+
+.link-hidden {
+    display: none;
+}
+
+/* 
+-Display -> Inline vs. Block vs. Inline-Block
+1-Block : adds line-break - inline dose not
+2-Block accepts width/height - inline dose not
+3-Block accepts top/bottom in padding/margin - inline dose not
+
+-Inline-Block
+1-Dose not add line-break
+2-Accepts width/hight
+3-Accepts top/bottom in padding/margin
+*/
+
+/* By Default: Anchor Elements Are Inline  */
+/* By Default :DIVs Element Are Block */
+
+/* .link , .author -> Grouping هيك بمعنى  */
+.link,
+.author {
+    width: 200px;
+    height: 100px;
+    padding: 20px;
+    margin: 20px;
+}
+
+.link-inline-block {
+    display: inline-block;
+}
+
+.author {
+    background-color: red;
+}
+
+/* Positions -> تحديد مكان العنصر */
+/* By Defult Html Elements Has Static Positions */
+/* By Defult Elements Whit Positions absolute will be relative to the body element */
+
+.javascript {
+    position: relative;
+    /*  child بمعنى اي  */
+    background-color: yellow;
+    min-width: 100%;
+    min-height: 100%;
+    color: black;
+    text-align: center;
+    padding: 20px;
+}
+
+.java,
+.php,
+.python, 
+.flutter {
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    margin: 10px;
+    color: white;
+}
+
+.java {
+    background-color: brown;
+    position: absolute;
+    top: 0;
+    right:0 ;
+
+}
+
+.php {
+    background-color: purple;
+}
+
+.python {
+    background-color: lightskyblue;
+}
+
+.flutter {
+    background-color: chocolate;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}

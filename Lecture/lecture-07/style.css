@@ -1,0 +1,156 @@
+/*  IN CSS WE HAVE : static - relative - absolute - sticky - fixed */
+/* BY DEFULT ALL HTML ELEMENTS HAS (static) POSITION */
+/*  IN CSS WE HAVE : static - relative - absolute - sticky - fixed */
+/* TO SET THE EXACT POSITION FOR (absolute - sticky - fixed) WE USE (top - right - bottom - left ) PORPERTIES */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* CSS VARIABLES */
+/* sodo class -> :root === html */
+:root {
+    /* SETTING CSS VARIABLES '--variable-name : variable-value */
+    --primary-color: #22c55e;
+    --primary-light-color: #86efac;
+    --primary-dark-color: #15803d;
+    --primary-foreground-color: #f0fdf4;
+
+    --secondary-color: #06b6d4;
+    --secondary-light-color: #67e8f9;
+    --secondary-dark-color: #0e7490;
+    --secondary-foreground-color: #ecfeff;
+
+    /* بنفع نستخدم متغير بمتغير  */
+
+    --primary-border: 2px solid var(--primary-dark-color);
+    --secondary-border: 2px solid var(--secondary-dark-color);
+
+    --square-size: 100px;
+    --space-sm: 8px;
+    --space: 12px;
+    --space-lg: 24px;
+
+}
+
+
+.skills {
+    /* USING CSS SARIABLE var(--variable-name) */
+    width: var(--square-size);
+    height: var(--square-size);
+    color: var(--primary-foreground-color);
+    background-color: var(--primary-color);
+    padding: var(--space-lg);
+    margin: var(--space-lg);
+    border: var(--primary-border);
+}
+
+.skills-small {
+    /* OVERRIDING CSS VARIABLES */
+    /* var بياخذ اجدد قيمة  override هان بعمل  */
+    --square-size: 80px;
+}
+
+.javascript {
+    position: relative;
+    /* absolute position نك الي الهم  childern لكل ال  relative  راح تكوني */
+    min-width: 100vw;
+    min-height: 100vh;
+    color: white;
+    background-color: black;
+    padding: var(--space-lg);
+}
+
+.javascript p {
+    margin-bottom: var(--space);
+}
+
+.java,
+.php,
+.python,
+.c {
+    width: var(--square-size);
+    height: var(--square-size)x;
+    padding: var(--space-lg);
+}
+
+.java {
+    position: sticky;
+    /* عبل ما يخلص parentراح يضل ينزل مع ال */
+    /* بمعنى مكانك في صفحة الويب يكون مطلق */
+    top: 0;
+    right: 0;
+    background-color: var(--secondary-color);
+    z-index: 1;
+    /* Z index -> بتقارن برضو مين الاكبر بتكون فوق تانية  static غير  position الي ماخذة elemnts تبعت layars هاد بتحدد  */
+}
+
+.php {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: var(--primary-color);
+}
+
+.python {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: var(--primary-color);
+}
+
+.c {
+    position: fixed;
+    /*الصفحة body بتضل ثابتة في  */
+    top: 0;
+    right: 0;
+    background-color: var(--secondary-color);
+    z-index: -1;
+}
+
+/* TRANSFORM */
+/* TRANSFORM FUNCTION WE ARE GOING TO LEARN */
+/* translateX() - translateY() - translate - rotate() - scaleX() - scaleY() - scale */
+/* TRANSITIONS  */
+
+.bottom-primary {
+    width: 150px;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--primary-foreground-color);
+    background-color: var(--primary-color);
+    padding: var(--space-sm) var(--space);
+    margin: var(--space);
+    border: var(--primary-border);
+    border-radius: var(--space-sm);
+    cursor: pointer;
+    /* تغيير اشارة الماوس */
+    /* transition-duration: 200ms;
+    transition-property: background-color;
+    transition-timing-function: linear; */
+    transition: 200ms all linear;
+    /* بمعنى هل يبدا سريع ونصف الوقت يبطئ والعكس*/
+
+}
+
+/* sodo class */
+.bottom-primary:hover {
+    transform: translate(4px, -4px);
+    /* translate(X , Y ) */
+    /* transform: scaleX(1.1); */
+    /* width: 175px; */
+    /* USING MARGIN IN ANIMATIONS WILL AFFECT THE PAGE'S LAYOUT (LOGICAL ERROR) */
+    /* margin-top: -4px; -DO NOT DO THIS */
+    color: var(--primary-color);
+    background-color: var(--primary-foreground-color);
+}
+
+.skills-animate {
+
+    transition: 200ms all ease-in-out;
+}
+
+.skills-animate:hover {
+    transform: scaleX(0.8) scaleY(0.5) rotate(180deg);
+}

@@ -1,0 +1,84 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Display->في صفحة الويب elementطريقة عرض ال  */
+/* Display property: inline - block - inline-block - hidden - flex - grid */
+/* Flex :Flex Parent / Flex Children */
+
+/*
+-Flex  vs. Grid 
+Flex: Controls one-direction ->Row تبعها  deflut  (Row / Column) بمعنى اتجاه واحد اما 
+Grid: Controls two-direction
+ */
+/* Flex Parent */
+.attack-on-titan {
+    min-width: 100vw;
+    min-height: 85vh;
+    background-color: peachpuff;
+    padding: 1.25rem;
+
+    /* flex تبع ال  defulat behavir العناصر كلها جمب بعض صارت هاد*/
+    display: flex ;
+
+    /* Flex Parent Properties */
+    /* flex-direction: row-reverse -> عشان يعكس ارقام البوكس*/
+    flex-direction: row ; /* Flex اتجاه ال */
+    flex-wrap: wrap;/*بنزل لسطر تاني Parent اكبر من تبع  items تبع ال  width كتير وماخذ  items  في حال كان عنا */
+    /* Positioning in Main-Axis ->  main-axis خاصة بس لل*/
+    justify-content: center; 
+    
+    /* Positioning in crsso-Axis */
+    align-items:center ;
+
+    /* Positioning for multiple-row */
+   /*row خاصة ب  */
+    /* align-content: flex-start ; */
+    /* Item or childern مش لل  Flex and Grid and parent بس بتكون */
+    /* To add space between flex children/item */
+    gap: 1.25rem; 
+
+}
+
+/* Old Way */
+/* .attack-on-titan .box:not(:last-child) {
+    margin-bottom: 1rem;
+} */
+
+.box {
+    color: green;
+    background-color: palegreen;
+    padding: 1.25rem;
+    border: 0.125rem solid green;
+}
+/* Flex Children Properties */
+.box-1 {
+    /* Positioning individual flex children in Cross-Axis */
+    align-self: flex-start;
+}
+.box-3 {
+    align-self: flex-end;
+}
+
+.gaza {
+    min-width: 100vw;
+    min-height: 100vh;
+    color: white;
+    background-color: black;
+
+    display: flex;
+
+    /* justify-content: center;
+    align-items: center; */
+
+}
+
+.gaza div {
+    width:10rem;
+    height: 10rem;
+    background-color: red;
+    /* div لل  center بتعمل  margin: auto لما نعمل  */
+    margin: auto;
+}
