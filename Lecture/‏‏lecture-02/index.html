@@ -3,15 +3,13 @@
 <input type="email" >
 <input type="password" >
 <input type="file" >
-654654654
+
 <br> -->
 <!-- لو بدنا ندخل ايميل و باسورد -->
 <!-- لازم كل form elements داخل form  -->
 <!-- Best Practis -->
 <form>
-  <h2>Apply For Act-Hub Courses</h2>
-  <!-- block element // بتاخذ عرض الصفحة كلها-->
-  <!--self closing -->
+  <h2>Apply For Act-Hub Courses</h2> <!-- block element // بتاخذ عرض الصفحة كلها--> <!--self closing -->
   <!-- for and id لازم يكونوا نفس النص -->
   <!-- <label for="email-input" >Email</label>
     <input id="email-input" type="email" > <!-- in line element // هاد ما بتاخذ عرض الصفحة  -->
@@ -21,30 +19,25 @@
     <input id="password-input" type="password" >
     <br> -->
   <!-- طريقة تانية برضو  -->
-  <label>
-    Name
-    <input type="text" placeholder="Your Name" required />
+  <label> Name
+    <input type="text" placeholder="Your Name" required>
     <!-- different between value and placholder / placeholder -> بتعطي تلميح / value -> بتعطي القيمة الفعلية  -->
   </label>
-  <br />
-  <label>
-    Age
-    <input type="number" placeholder="Your Age in numbers please" required />
+  <br>
+  <label> Age
+    <input type="number" placeholder="Your Age in numbers please" required>
   </label>
-  <br />
-  <label>
-    Phone Number
-    <input type="tel" placeholder="Your Phone in correct format" required />
+  <br>
+  <label> Phone Number
+    <input type="tel" placeholder="Your Phone in correct format" required>
   </label>
-  <br />
-  <label>
-    Email
-    <input type="email" placeholder="Your valid email " required />
+  <br>
+  <label> Email
+    <input type="email" placeholder="Your valid email " required>
   </label>
-  <br />
-  <label>
-    password
-    <input type="password" placeholder="Your password" required />
+  <br>
+  <label> password
+    <input type="password" placeholder="Your password" required>
   </label>
   <!-- 
      Form Data
@@ -52,37 +45,25 @@
      skills-input : html - css - javascript
      -->
   <!-- rideo and check buttons -->
-  <h4>Your Gender</h4>
-  <input name="gender-input" id="male-radio-input" value="male" type="radio" />
-  <!-- value -> بتعطي قيمة  -->
+  <h4> Your Gender </h4>
+  <input name="gender-input" id="male-radio-input" value="male" type="radio"> <!-- value -> بتعطي قيمة  -->
   <label for="male-radio-input"> Male </label>
 
-  <input
-    name="gender-input"
-    id="female-radio-input"
-    value="female"
-    type="radio"
-  />
+  <input name="gender-input" id="female-radio-input" value="female" type="radio">
   <label for="female-radio-input">Female</label>
 
-  <h4>Select Course</h4>
+  <h4> Select Course </h4>
 
-  <input
-    name="courses-input"
-    id="course-1"
-    type="radio"
-    value="course-1"
-    checked
-  />
+  <input name="courses-input" id="course-1" type="radio" value="course-1" checked>
   <label for="course-1">Front-End Development</label>
 
-  <input name="courses-input" id="course-2" type="radio" value="course-2" />
+  <input name="courses-input" id="course-2" type="radio" value="course-2">
   <label for="course-2">Back-End Developmen</label>
 
-  <input name="courses-input" id="course-3" type="radio" value="course-3" />
+  <input name="courses-input" id="course-3" type="radio" value="course-3">
   <label for="course-3">Flutter</label>
 
-  <br />
+  <br>
   <!-- Second option -->
   <select>
     <option value="course-1">Front-End Development</option>
@@ -102,29 +83,24 @@
     </optgroup>
   </select>
 
-  <br />
+  <br>
 
   <h4>Select your skills</h4>
   <!-- لازم هلقيت اربطهم في بعض بالاسم واعطي لكل وحدة قيمة بتختلف عشان لما اختار  -->
-  <input name="skills-input" id="html" value="html" type="checkbox" checked />
+  <input name="skills-input" id="html" value="html" type="checkbox" checked>
   <!-- checked -> بتخلي تختار القيمة by defult -->
   <label for="html">Html</label>
 
-  <input name="skills-input" id="css" value="css" type="checkbox" />
+  <input name="skills-input" id="css" value="css" type="checkbox">
   <label for="css">Css</label>
 
-  <input
-    name="skills-input"
-    id="javascript"
-    value="javascript"
-    type="checkbox"
-  />
+  <input name="skills-input" id="javascript" value="javascript" type="checkbox">
   <label for="javascript">JavaScript</label>
-  <br />
+  <br>
   <label for="message-textarea">Your message</label>
-  <br />
+  <br>
   <textarea id="message-textarea" rows="2" cols="30" disabled></textarea>
-  <br />
+  <br>
   <!-- كيف بدنا نضيف زر للصفحة  -->
-  <button type="submit">Sign up</button>
+  <button type="submit"> Sign up </button>
 </form>
