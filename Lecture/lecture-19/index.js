@@ -39,6 +39,8 @@ console.log(0 || "" || 100 || false || null); // 100 -> وبتفحص اول ما
 console.log("North Gaza - Jabalia" || 100 || false || true || null); // North Gaza - Jabalia
 console.log(false || undefined || "" || 0 || null); // null ->بطبع اخر اشي موجود false هان لما يكون كلهم
 
+let y = false || "" || console.log("Eman/Sama") || true; // Eman/Sama -> false هاد بتطبع بس قيمتها  and y= true
+
 const firstName = null;
 const secondName = "Maslama";
 const userName = firstName || secondName || "Anonymous";
@@ -72,6 +74,8 @@ console.log(0 && "" && 100 && false && null); // 0 ->  بطبع اول اشيfal
 console.log("North Gaza - Jabalia" && 100 && false && true && null);
 console.log(true && NaN && undefined && "" && 0 && null);
 console.log(true && 100 && "0" && "Gaza Strip");
+
+let z = console.log("Maslma") && false && null && 100; // z = undefind بس قيمة  undefind بس قيمتها  Maslma راح يطبع 
 
 const number = 19;
 
@@ -136,7 +140,7 @@ console.log(message);
 console.log(null ?? "" ?? undefined ?? true);
 console.log(undefined ?? false ?? "" ?? null);
 
-console.log(null ?? undefined ?? undefined ?? null); // هان برجع اخر قيمة 
+console.log(null ?? undefined ?? undefined ?? null); // هان برجع اخر قيمة
 
 const userRate = prompt("How good is Israel? - out of 10");
 const userMessage = +userRate ?? 1; // Number بنحول هاد الي رقم بدل ما نكتب  +userRate

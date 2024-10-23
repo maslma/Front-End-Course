@@ -1,13 +1,11 @@
 console.log("------ While Loop ------");
 
-/*
-Infinity Loop
+// Infinity Loop
 
-let start = 1;
-while (start <= 10) {
-  console.log(start);
-}
-*/
+// let start = 1;
+// while (start <= 10) {
+//   console.log(start);
+// }
 
 let start = 1;
 while (start <= 10) {
@@ -18,23 +16,28 @@ while (start <= 10) {
 
 console.log(`start variable after loop execution: ${start}`);
 
-let i = 8;
+let i = 8; // false لعند قيمة صفر  true بتطلع  Boolean لما نيجي نحولها
 while (i) {
   console.log(i);
   i--;
 }
 
-console.log("------ Do ... While Loop ------");
+console.log("------ Do ... While Loop ------"); // بتعمل على تنفيذ مرة واحدة وبعدها يفحص
 
-let number;
+// let number;
 
-do {
-  number = +prompt("Enter a number less than 8: ");
-} while (number > 8);
+// do {
+//   number = +prompt("Enter a number less than 8: "); // + بنحولها لرقم عن طريق
+// } while (number > 8);
 
-console.log(`User number was: ${number}`);
+// console.log(`User number was: ${number}`);
 
 console.log("------ For Loop ------");
+
+// syntax for
+// for(begin ; condition ; Step(increment/decrement)){
+//   body
+// }
 
 let forStart;
 for (forStart = 1; forStart < 10; forStart++) {
@@ -59,6 +62,7 @@ for (; i; ) {
 }
 
 console.log("------ Nested Loop ------");
+
 // The Multiplication Table Using Nested Loop
 // 1 2 3 4 5 6 7 8 9 10
 let numberSingle;
@@ -74,12 +78,12 @@ for (numberSingle = 1; numberSingle <= 10; numberSingle++) {
 
 console.log("------ Switch Statement ------");
 
-const myName = "Ahmed";
+const myName = "Maslma";
 
 if (myName === "Shawqi") {
   console.log("You are Shawqi!");
-} else if (myName === "Ahmed" || myName === "Sama") {
-  console.log("You are Ahmed!");
+} else if (myName === "Maslma" || myName === "Sama") {
+  console.log("You are Maslma!");
   console.log("You are Sama!");
 } else {
   console.log("I do not know you!");
@@ -89,9 +93,9 @@ switch (myName) {
   case "Shawqi":
     console.log("You are Shawqi!");
     break;
-  case "Ahmed":
+  case "Maslma":
   case "Sama":
-    console.log("You are Ahmed!");
+    console.log("You are Maslma!");
     console.log("You are Sama!");
     break;
   default:
@@ -102,7 +106,7 @@ const myNumber = "5";
 const mySecondNumber = 20;
 
 switch (+myNumber) {
-  case mySecondNumber - myNumber: // (mySecondNumber - myNumber) === +myNumber -> (20 - "5") === 10 -> 15 === 10 -> false
+  case mySecondNumber - myNumber: // (mySecondNumber - myNumber) === +myNumber -> (20 - "5") === 5 -> 15 === 5 -> false
     console.log("Number is 10");
     break;
   case mySecondNumber > +myNumber: // (mySecondNumber > +myNumber) === +myNumber -> (20 > 5) === 5 -> true === 5 -> false
@@ -116,11 +120,12 @@ switch (+myNumber) {
 // 1. Last Loop Value
 console.log("------ First Task ------");
 let iFirst = 3;
-
+// راح يطبع لعند 1 لما يصل صفر مش راح يطبع
 while (iFirst) {
   console.log(iFirst--);
 }
 
+// راح تكون صفر iFirst قيمة
 console.log(`iFirst value after loop execution: ${iFirst}`);
 
 // 2. Which Values Does The While Loop Show
