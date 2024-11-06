@@ -78,51 +78,7 @@ and returns a new object with the properties of the objects merged into it.
 value and if it is an object, then replicate its structure as well. this is called deep cloning or structured cloning.
 - there is `structuredClone` function that implements deep cloning.
 
-15. Garbage Collection
-- memory management in JavaScript is performed automatically and invisibly to us. we create 
-primitives, objects, functions... all that takes memory.
-- what happens when something is not needed anymore? how does JavaScript engine discover it 
-and clean it up?
-- the main concept of memory management in JavaScript is reachability.
-- simply put, "reachable" values are those that are accessible or usable somehow. they are 
-guaranteed to be stored in memory.
-
-A) there is a base set of inherently reachable values, they can not be deleted for obvious 
-reasons:
-1. the currently executing function, its local variables and parameters.
-2. other functions on the current chain of nested calls, their local variables and 
-parameters.
-3. global variables.
-4. others - we will explain them later.
-
-- these values are called "roots".
-
-B) any other value is considered reachable if it is from a root by a reference or by a 
-chain of references.
-
-16. Internal Algorithms
-- the basic garbage collection algorithm is called "mark and sweep".
-1. the garbage collector takes roots and "marks" remember them.
-2. then it visits and "marks" all the references from them.
-3. then it visits marked objects and marks their references. all visited objects are 
-remembered, so as not to visit the same object twice in the future.
-4. ...and so on until every reachable (from the roots) references are visited.
-5. all objects except marked ones are deleted.
-
-- that is the concept of how garbage collection works. JavaScript engines apply many 
-optimizations to make it run faster and do not introduce any delays in the code execution.
-
-- some of the optimizations are:
-1. generational collection.
-2. incremental collection.
-3. idle-time collection.
-
-17. Object Methods, `this` Keyword
-- objects are usually created to represent entities of the real world, such as users, 
-orders, etc.
-- and in the real world, the user can act: select something from the shopping cart, log in, 
-log out, etc.
-- actions are represented in JavaScript by function. -->
+-->
 
 <!DOCTYPE html>
 <html lang="en">
