@@ -1,0 +1,46 @@
+<!-- 
+Lecture 27
+18. Constructor, Operator `new`
+- the regular {...} syntax allows us to create on object, but often we need to create many 
+similar objects, like multiple users, menu items, and so on.
+- that can be done using constructors functions and "new" operator.
+- a constructor function is technically a function with two conventions:
+ 1. they are named with a capital letter first. 
+ 2. they should be executed using the `new` operator.
+
+18.1 What Happens When We Use `new` With A Constructor Function?
+1. the `new` operator creates a new empty object and assigns it to `this`.
+2. the function body executes.
+3. the function returns the `this` value.
+
+- this is the main purpose of constructors: to create an object and return it (in order to 
+implement reusable object creation code).
+
+- technically, any function can be used as a constructor (except for the arrow functions).
+
+18.2 Constructor Mode Test: `new.target`
+
+18.3 Return From Constructors
+
+18.4 Omitting Parentheses
+
+18.5 Methods In Constructor
+
+19. Optional Chaining
+- the optional chaining `?.` is a safe way to access nested object properties, even if an 
+intermediate property does not exist.
+
+19.1 The Non-Existing Property Problem
+
+19.2 Short-Circuiting
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Lecture 27</title>
+  </head>
+  <body>
+    <script src="index.js"></script>
+  </body>
+</html>
