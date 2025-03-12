@@ -84,3 +84,7 @@ console.log(counterC instanceof Counter);
 console.log(counterC instanceof CounterC);
 
 console.log(Counter.name);
+
+function fromScriptLoader() {
+  console.log("Maslma Developer 38");
+}

@@ -93,7 +93,7 @@ console.log("The program is still running");
 
 console.log("----------- Fetching... ----------");
 // Example From Real World (Log-in Form):
-// 1- Sometimes you will need custom errors. 
+// 1- Sometimes you will need custom errors.
 // So you can create your own error class.
 
 // FetchError -> عارف راح اتعامل مع سيرفر
@@ -140,7 +140,7 @@ try {
 }
 console.log("--------- Fetching One and Two -------------");
 
-// ReThrowing هاد عبارة عن  ErrorHandling هاد مش  catch جو throw لما نشوف 
+// ReThrowing هاد عبارة عن  ErrorHandling هاد مش  catch جو throw لما نشوف
 const requests = {
   users: { response: "...some users" },
   settings: { response: "...some settings" },
@@ -193,3 +193,7 @@ try {
 }
 
 console.log("----------- Promises and async/await -----------");
+
+function fromScriptLoader() {
+  console.log("Maslma Developer");
+}
